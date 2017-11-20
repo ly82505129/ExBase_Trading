@@ -2,7 +2,7 @@
 <view class='container'>
   <image src='/images/avatar/timg1.jpg' class='avatar'></image>
   <text class='helloText'>Hello,exbase</text>
-  <view class='journey-container'>
+  <view class='journey-container' catchtap='onTapJump'>
     <text class='journey'>学习小程序</text>
   </view>
 </view>
