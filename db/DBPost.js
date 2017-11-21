@@ -43,8 +43,6 @@ class DBPost {
       }
     }
   }
-
-
   getAllPostData() {
     var res = wx.getStorageSync(this.storageKeyName);
     if (!res) {
@@ -55,6 +53,20 @@ class DBPost {
   }
   execSetStorageSync(data) {
     wx.setStorageSync(this.storageKeyName, data);
+  }
+  collect(){
+    return this.updatePostData('collect');
+  }
+
+  updatePostData(category){
+    var itemData=this.getPostItemByid(),
+    postData=itemData.dat,
+    allPostData=this.getAllPostData();
+    switch(category){
+      case'collect':
+       
+    }
+
   }
 };
 export { DBPost }
