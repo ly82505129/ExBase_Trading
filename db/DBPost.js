@@ -103,6 +103,29 @@ class DBPost {
 
   }
 
+  getCommentData(){
+    var itemData=this.getPostItemByid().data;
+    itemData.comments.sort(this.compareWithTime);
+    var len=itemData.comments.length;
+    var util = require('../util/util.js');
+    var comment;
+    for(var i=0;i<len;i++){
+      comment=itemData.comments[i];
+      comment.create_time=util.getDiffTime(comment.create_time,true);
 
+    }
+    return itemData.comments;
+  }
+
+  compareWithTime(value1,value2){
+    var flag=parseFloat(value1.create_time)-parseFloat(value2.create_time);
+    if(flag<0){
+      return 1;
+    }else if(flag>0){
+      return -1;
+    }else{
+      return 0;
+    }
+  }
 };
 export {DBPost}

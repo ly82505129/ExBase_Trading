@@ -1,0 +1,6 @@
+<!--pages/post/post-comment/post-comment.wxml-->
+<text>pages/post/post-comment/post-comment.wxml</text>
+<view class='comment-detail-box'>
+<view class='comment-main-box'></view>
+
+</view>
