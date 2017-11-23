@@ -1,16 +1,7 @@
 Page({
   onTapJump:function(event){
-    wx.redirectTo({
+    wx.switchTab({
       url: '../post/post',
-      success:function(){
-
-      },
-      fail:function(){
-
-      },
-      complete:function(){
-
-      }
     });
   }
 })

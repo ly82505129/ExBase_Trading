@@ -3,9 +3,25 @@
     "pages/welcome/welcome",
     "pages/post/post",
     "pages/post/post-detail/post-detail",
-    "pages/post/post-comment/post-comment"
+    "pages/post/post-comment/post-comment",
+    "pages/movie/moive"
   ],
   "window": {
     "navigationBarBackgroundColor": "#4A6141"
+  },
+  "tabBar": {
+    "position":"top",
+    "list": [{
+      "pagePath": "pages/post/post",
+      "text": "文字",
+      "iconPath": "images/icon/wx_app_news.png",
+      "selectedIconPath": "images/icon/wx_app_news@HL.png"
+    },
+    {
+      "pagePath": "pages/movie/moive",
+      "text": "光影",
+      "iconPath": "images/icon/wx_app_movie.png",
+      "selectedIconPath": "images/icon/wx_app_movie@HL.png"
+    }]
   }
 }
