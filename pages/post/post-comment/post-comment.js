@@ -16,9 +16,9 @@ Page({
     var postId=options.id;
     this.dbPost = new DBPost(postId);
     var comments=this.dbPost.getCommentData();
-    this.setdata({
+    this.setData({
       comments:comments
-    })
+    });
   },
 
   /**
