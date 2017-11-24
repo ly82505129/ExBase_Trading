@@ -35,5 +35,8 @@ App({
    */
   onError: function (msg) {
 
+  },
+  globalData:{
+      doubanBase:"https://api.douban.com"
   }
 })

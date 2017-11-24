@@ -7,6 +7,7 @@ Page({
   },
   onLoad: function () {
     var dbPost = new DBPost();
+    console.log(dbPost.getAllPostData());
     this.setData({
       postList: dbPost.getAllPostData()
     })
