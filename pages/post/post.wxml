@@ -15,7 +15,25 @@
 
   <block wx:for="{{postList}}" wx:key="*this" wx:for-item="item" wx:for-index="idx">
     <view catchtap='onTapToDetail' data-post-id="{{item.postId}}">
-      <template is="postItemTpl" data="{{...item}}" />
+        <view class='post-container'>
+    <view class='post-author-date'>
+      <image src='{{item.avatar}}' />
+      <text>{{date}}</text>
+    </view>
+    <text class='post-title'>{{title}}</text>
+    <image class='post-image' src='{{postImg}}' mode='aspectFill' />
+    <text class='post-content'>{{content}}</text>
+    <view class='post-like'>
+      <image src='/images/icon/wx_app_collect.png' />
+      <text>{{collectionNum.array[0]}}</text>
+      <image src='/images/icon/wx_app_view.png' />
+      <text>{{readingNum}}</text>
+      <image src='/images/icon/wx_app_message.png' />
+      <text>{{commentNum}}</text>
+
+    </view>
+  </view>
+
     </view>
   </block>
 </view>
